@@ -16,12 +16,7 @@ const handleRejected = (state, action) => {
 const contactSlice = createSlice({
   name: 'contacts',
   initialState: contactsInitialState,
-  reducers: {
-    deleteContact(state, action) {
-      const index = state.items.findIndex(item => item.id === action.payload);
-      state.items.splice(index, 1);
-    },
-  },
+ 
   extraReducers: {
     [fetchContacts.pending]: handlePending,
     [addContact.pending]: handlePending,
